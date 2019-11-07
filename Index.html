@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MC, Home</title>
+<style>
+.tab {height: 100%;
+	background-color: powderblue;}
+.tablinks
+	{border: none;
+	padding: 15px 30px;
+	font-size: 30px;
+	font:arial;
+	background-color: powderblue;}
+.tablinks:hover{
+	background-color:#00bfff;}
+.tablinks:active{
+	background-color: #e6f9ff;}
+}
+</style>
+</head>
+<body>
+<div class="tab" 
+ >
+	<button class="tablinks" onclick="openTopic(event, 'Home')" id="defaultOpen">Home</button>
+	<button class="tablinks" onclick="openTopic(event, 'Projects')">Projects</button>
+	<button class="tablinks" onclick="openTopic(event, 'Qualifications')">Qualifications</button>
+	<button class="tablinks" onclick="openTopic(event, 'Contact info')">Contact infomation</button>
+</div>
+<br>
+<!--Content-->
+<div id="Home" class="tabcontent"  >
+	<h3>Home</h3>
+	<p> This webpage was coded by me.</p>
+</div>
+<div id="Projects" class = "tabcontent">
+	<h3>Projects</h3>
+	<p>To Come</p>
+</div>
+<div id="Qualifications" class = "tabcontent">
+	<h3>Qualifications</h3>
+	<p>To Come</p>
+</div>
+<div id="Contact info" class = "tabcontent">
+	<p>To Come</p>
+</div>
+</body>
+
+
+<!--SCRIPT-->
+<script>
+function openTopic(evt, TabName){
+//Declare Variables
+var i, tabcontent,tablinks;
+//hide all elements
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i=0;i<tabcontent.length; i++){
+	tabcontent[i].style.display = "none";}
+//Removing active state for all variables.
+tablinks=document.getElementsByClassName("tablinks");
+for(i=0;i<tablinks.length;i++){
+	tablinks[i].className = tablinks[i].className.replace(" active", "");}
+//Turning on the tab we have selected.
+document.getElementById(TabName).style.display="block";
+evt.currentTarget.className += " active";
+document.title = "MC, "+TabName; //Makes Tab name reflect the actual content being displayed.
+}
+
+//DEFAULT TAB SETUP
+document.getElementById("defaultOpen").click();
+</script>
+</html> 
