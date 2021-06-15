@@ -1,1 +1,1 @@
-# TryHardSuckAnyway.github.io
+# Funatuna.github.io
